@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>FeedbackSystem</display-name>
+
+    <!-- Main Feedback Submission Servlet -->
+    <servlet>
+        <servlet-name>SubmitFeedbackServlet</servlet-name>
+        <servlet-class>com.feedback.SubmitFeedbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubmitFeedbackServlet</servlet-name>
+        <url-pattern>/submitFeedback</url-pattern>
+    </servlet-mapping>
+
+    <!-- Redirect '/' to feedback.jsp -->
+    <servlet>
+        <servlet-name>HomeRedirectServlet</servlet-name>
+        <servlet-class>com.feedback.HomeRedirectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeRedirectServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+</web-app>
